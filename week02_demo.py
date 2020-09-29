@@ -1,3 +1,4 @@
+'My Code'
 # Initial balance of the bank account
 initial_balance = 200
 
@@ -35,11 +36,11 @@ def update_statement(statement, initial_balance, interest_rate):
     '''
     balance = initial_balance
     total_interest = 0
-    
+
     for month in statement:
         balance = update_balance(month, balance)
         total_interest = total_interest + calculate_interest(balance, interest_rate)
-    
+
     statement[-1].append(total_interest)
     balance = balance + total_interest
 
