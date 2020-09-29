@@ -67,7 +67,7 @@ def update_statement_monthly(statement, initial_balance, interest_rate):
     return statement, balance
 
 
-'Second Test Example'
+'Second Test Example (easy)'
 statement_2 = [[100, 100], [100, 100],[100,100]]
 balance_2 = 0
 print(update_statement_monthly(statement_2, balance_2, 10))
