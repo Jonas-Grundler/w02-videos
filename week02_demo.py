@@ -18,22 +18,23 @@ statement = [[-119.02, -56.54, 1200, -80, -12.99, -550, -167.90, -5.58, -3.54, -
 # - pay the total (update the balance for the last month)
 # - log that transaction into statement for 6th month.
 
+'Function to get the account balance at the end of each month'
 def update_balance(month, starting_balance):
     balance = starting_balance + sum(month)
     return balance
 
+example_month = [100, 200, -300]
+example_start = 100
+result = update_balance(example_month, example_start)
+print(result)
+
+'Returns total interest paid for a given balance, at rate interest_rate (given in %).'
 def calculate_interest(balance, interest_rate):
-    '''
-    Returns total interest paid for a given balance,
-    at rate interest_rate (given in %).
-    '''
     interest = 0.01 * interest_rate * balance
     return interest
 
+'Update the client's bank statement with interest payment.'
 def update_statement(statement, initial_balance, interest_rate):
-    '''
-    Update the client's bank statement with interest payment.
-    '''
     balance = initial_balance
     total_interest = 0
 
