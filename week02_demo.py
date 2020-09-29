@@ -38,7 +38,7 @@ example_interest = 5
 calculate_interest(example_balance, example_interest)
 
 
-'Update the client's bank statement with interest payment.'
+'Update the clients bank statement with interest payment.''
 def update_statement(statement, initial_balance, interest_rate):
     balance = initial_balance
     total_interest = 0
@@ -50,6 +50,12 @@ def update_statement(statement, initial_balance, interest_rate):
     statement[-1].append(total_interest)
     balance = balance + total_interest
 
-    return statement, balance
+    return total_interest, balance
 
 print(update_statement(statement, initial_balance, 0.5))
+
+
+'Second Test Example'
+statement_2 = [[100, 100], [100, -100], [50, 250]]
+balance_2 = 500
+print(update_statement(statement_2, balance_2, 5))
