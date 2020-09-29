@@ -33,6 +33,11 @@ def calculate_interest(balance, interest_rate):
     interest = 0.01 * interest_rate * balance
     return interest
 
+example_balance = 100
+example_interest = 5
+calculate_interest(example_balance, example_interest)
+
+
 'Update the client's bank statement with interest payment.'
 def update_statement(statement, initial_balance, interest_rate):
     balance = initial_balance
