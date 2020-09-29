@@ -52,10 +52,25 @@ def update_statement(statement, initial_balance, interest_rate):
 
     return total_interest, balance
 
-print(update_statement(statement, initial_balance, 0.5))
+'EXTRA TASK: Update the clients bank statement with interest payment monthly.''
+def update_statement_monthly(statement, initial_balance, interest_rate):
+    balance = initial_balance
+    total_interest = 0
+
+    for month in statement:
+
+        balance = update_balance(month, balance)
+        monthly_interest = calculate_interest(balance, interest_rate)
+        #statement[-i].append(monthly_interest)
+        balance = balance + monthly_interest
+
+    return statement, balance
 
 
 'Second Test Example'
-statement_2 = [[100, 100], [100, -100], [50, 250]]
-balance_2 = 500
-print(update_statement(statement_2, balance_2, 5))
+statement_2 = [[100, 100], [100, 100],[100,100]]
+balance_2 = 0
+print(update_statement_monthly(statement_2, balance_2, 10))
+
+
+print(update_statement(statement, initial_balance, 0.5))
