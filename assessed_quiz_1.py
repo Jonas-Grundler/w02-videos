@@ -30,21 +30,20 @@ print(every_other_num(2,4))
 
 'Ex 4'
 def time_converter(milliseconds):
-
-    years = floor(milliseconds/(365*30*24*60*60*1000))
-    remainder = milliseconds%(365*30*24*60*60*1000)
-    months = remainder%(30*24*60*60*1000)
-    remainder = remainder - months* (30*24*60*60*1000)
-    days = remainder%(24*60*60*1000)
-    remainder = remainder - days* (24*60*60*1000)
-    hours = remainder%(60*60*1000)
-    remainder = remainder - hours* (60*60*1000)
-    minutes = remainder%(60*1000)
-    remainder = remainder - minutes* (60*1000)
-    seconds = remainder%(1000)
-    remainder = remainder - seconds* (1000)
-    milliseconds = remainder
-
+    remainder = milliseconds
+    years = int(remainder/(12*30*24*60*60*1000))
+    remainder = remainder%(12*30*24*60*60*1000)
+    months = int(remainder/(30*24*60*60*1000))
+    remainder = remainder%(30*24*60*60*1000)
+    days = int(remainder/(24*60*60*1000))
+    remainder = remainder%(24*60*60*1000)
+    hours = int(remainder/(60*60*1000))
+    remainder = remainder%(60*60*1000)
+    mins = int(remainder/(60*1000))
+    remainder = remainder%(60*1000)
+    secs = int(remainder/(1000))
+    remainder = remainder%(1000)
+    ms = int(remainder)
     # Print the result
     print(f'{years} years,')
     print(f'{months} months,')
@@ -55,6 +54,4 @@ def time_converter(milliseconds):
     print(f'and {ms} milliseconds.')
 
 time_converter(1000000000)
-
-
-7%2
+time_converter(31104000000)
