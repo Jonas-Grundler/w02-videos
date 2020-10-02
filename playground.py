@@ -119,3 +119,5 @@ def geometric():
     print(res)
 
 geometric()
+
+'VSCode works'
