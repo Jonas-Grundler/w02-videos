@@ -120,4 +120,4 @@ def geometric():
 
 geometric()
 
-'VSCode works'
+'VSCode'
